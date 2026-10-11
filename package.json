@@ -1,0 +1,46 @@
+{
+  "name": "dsh-plugin-subitem-status",
+  "version": "1.1.0",
+  "type": "module",
+  "description": "插件页卡片显示包内组件状态，设置页配置选项卡显示提供者包名，便于排查问题。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "plugin-manager",
+    "ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lingmingxi/dsh-plugin-subitem-status.git"
+  },
+  "homepage": "https://github.com/lingmingxi/dsh-plugin-subitem-status#readme",
+  "bugs": {
+    "url": "https://github.com/lingmingxi/dsh-plugin-subitem-status/issues"
+  },
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  },
+  "scripts": {
+    "test": "node tests/smoke.mjs && node tests/dom.mjs && node tests/lifecycle.mjs && node tests/settings.mjs && node tests/boot-gate.mjs"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,3 @@
+- insert:
+    - id: subitem-status
+      name: 'dsh-plugin-subitem-status'
